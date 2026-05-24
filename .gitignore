@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Local/project temporary files
+.tmp_project_onboarding_skill/
+.devkit/
+
+# Dependencies/build outputs
+node_modules/
+dist/
+build/
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
