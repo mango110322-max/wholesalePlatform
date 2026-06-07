@@ -31,7 +31,7 @@ P2601_wholesale-platform      项目名称
 │       ├── L2_RelatedDocs    以表格形式记录所有的相关文档
 │       ├── L2.1              对第 1 篇具体文档的分析或重点摘要
 │       └── L2.2              对第 2 篇具体文档的分析或重点摘要
-├── product-design/           产品设计，承载用户、场景、需求、功能、流程
+├── product-design/           产品设计，承载 Research1 调研数据、PRD0 战略与范围、PRD2 里程碑、后续版本或功能 PRD
 ├── ui-design/                UI/交互设计，承载页面结构、线框、视觉稿、组件规范
 ├── development/              开发实现，承载前端、后端、接口、数据库、工程说明
 ├── quality/                  质量与测试，承载测试用例、验收标准、问题记录
@@ -53,7 +53,7 @@ P2601_wholesale-platform      项目名称
 | 项目日志 | `project-info/L1_Log.md` | 看项目关键进展和阶段性变化 |
 | 发散想法 | `project-info/BS_BrainStorming/` | 看未整理成正式计划的想法 |
 | 相关资料 | `project-info/RelatedDocs/L2_RelatedDocs.md` | 看外部资料、文章、分析记录 |
-| 产品设计产物 | `product-design/` | 看产品定位、用户角色、核心场景、MVP 范围、功能清单、业务流程 |
+| 产品设计产物 | `product-design/` | 看 Research1 的调研材料、PRD0 的战略层与范围层、PRD2 的里程碑，以及后续具体版本/功能 PRD |
 | UI/交互设计产物 | `ui-design/` | 看页面清单、信息架构、用户路径、线框、视觉风格、组件规范 |
 | 开发实现产物 | `development/` | 看技术方案、前后端工程、接口、数据库和开发记录 |
 | 质量与测试产物 | `quality/` | 看验收标准、测试用例、Bug 记录和体验检查清单 |

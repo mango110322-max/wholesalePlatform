@@ -1,0 +1,6 @@
+task mode: create
+primary deck-profile: engineering-platform
+required proof objects: editable Git concept model diagram
+source/asset requirements: no external data required
+profile-specific QA gates: legible technical labels, accurate command flow, clean rendered preview
+known missing inputs: none

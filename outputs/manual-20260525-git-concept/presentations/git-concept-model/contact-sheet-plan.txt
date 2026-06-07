@@ -1,0 +1,4 @@
+Single-slide plan:
+- technical model map with one central horizontal flow
+- secondary command rails above and below
+- concise notes for HEAD, branch refs, commits, and remote tracking

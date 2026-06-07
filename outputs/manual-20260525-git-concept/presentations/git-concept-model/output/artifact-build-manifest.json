@@ -1,0 +1,27 @@
+{
+  "output": "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/output/git-concept-model.pptx",
+  "outputBytes": 15029,
+  "slideCount": 1,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "previewDir": "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/preview",
+  "previewPaths": [
+    "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/preview/slide-01.png"
+  ],
+  "layoutDir": "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/layout/final",
+  "layoutResults": [
+    {
+      "layoutPath": "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/layout/final/slide-01.layout.json"
+    }
+  ],
+  "slides": [
+    {
+      "index": 1,
+      "requestedSlideNumber": 1,
+      "modulePath": "/Users/allen/Documents/wholesalePlatform/outputs/manual-20260525-git-concept/presentations/git-concept-model/slides/slide-01.mjs",
+      "exportName": "slide01"
+    }
+  ]
+}
