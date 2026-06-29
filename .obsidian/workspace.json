@@ -6,7 +6,7 @@
       {
         "id": "e29b7b5e2db43a43",
         "type": "tabs",
-        "dimension": 68.16720257234726,
+        "dimension": 82.5275657336726,
         "children": [
           {
             "id": "631b87ba2ef879b5",
@@ -14,16 +14,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "P2601_wholesale-platform/product-design/Research1_初次卖家侧调研&分析.md",
+                "file": "P2601_wholesale-platform/development/docs/D2_Frontend_Backend_Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Research1_初次卖家侧调研&分析"
+              "title": "D2_Frontend_Backend_Architecture"
             }
           },
           {
-            "id": "e9d33bed537d1317",
+            "id": "8f3d9debb02b01ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,20 +34,6 @@
               },
               "icon": "lucide-file",
               "title": "T1_Task"
-            }
-          },
-          {
-            "id": "8f3d9debb02b01ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "P2601_wholesale-platform/product-design/PRD0_Product_Strategy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PRD0_Product_Strategy"
             }
           },
           {
@@ -64,12 +50,13 @@
               "title": "PRD0_Product_Strategy"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "e11affabd8b9ecd2",
         "type": "tabs",
-        "dimension": 31.832797427652732,
+        "dimension": 17.472434266327397,
         "children": [
           {
             "id": "2af5101ad21b493d",
@@ -157,7 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 319.5
   },
   "right": {
     "id": "c395b7e8fe8be4e9",
@@ -173,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "P2601_wholesale-platform/product-design/Research1_初次卖家侧调研&分析.md",
+                "file": "P2601_wholesale-platform/project-info/T1_Task.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +170,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Research1_初次卖家侧调研&分析"
+              "title": "Backlinks for T1_Task"
             }
           },
           {
@@ -192,12 +179,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "P2601_wholesale-platform/product-design/Research1_初次卖家侧调研&分析.md",
+                "file": "P2601_wholesale-platform/project-info/T1_Task.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Research1_初次卖家侧调研&分析"
+              "title": "Outgoing links from T1_Task"
             }
           },
           {
@@ -235,13 +222,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "P2601_wholesale-platform/product-design/Research1_初次卖家侧调研&分析.md",
+                "file": "P2601_wholesale-platform/project-info/T1_Task.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Research1_初次卖家侧调研&分析"
+              "title": "Outline of T1_Task"
             }
           }
         ]
@@ -262,23 +249,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "631b87ba2ef879b5",
+  "active": "8f3d9debb02b01ed",
   "lastOpenFiles": [
-    "P2601_wholesale-platform/product-design/PRD1_Milestones.md",
-    "P2601_wholesale-platform/product-design/PRD0_Product_Strategy.md",
-    "P2601_wholesale-platform/product-design/Research1_初次卖家侧调研&分析.md",
-    "P2601_wholesale-platform/product-design/README.md",
-    "P2601_wholesale-platform/project-info/instruction.md",
-    "P2601_wholesale-platform/project-info/I1_Index.md",
+    "P2601_wholesale-platform/development/backend/target/surefire/surefirebooter-20260629233753240_3.jar",
+    "P2601_wholesale-platform/development/backend/target/surefire/surefire_0-20260629233753240_2tmp",
+    "P2601_wholesale-platform/development/backend/target/surefire/surefire-20260629233753240_1tmp",
+    "P2601_wholesale-platform/development/backend/target/surefire",
+    "P2601_wholesale-platform/project-info/T1.1_Task-archive.md",
     "P2601_wholesale-platform/project-info/T1_Task.md",
-    "调研",
-    "P2601_wholesale-platform/project-info/BS_BrainStorming/bs2_独家商品为什么没用起来.md",
-    "P2601_wholesale-platform/product-design/assets/analysis-buyer.png",
-    "P2601_wholesale-platform/product-design/assets/operation-1.webp",
-    "P2601_wholesale-platform/project-info/RelatedDocs/L2_RelatedDocs.md",
-    "P2601_wholesale-platform/project-info/BS_BrainStorming/bs1_MVP.md",
-    "P2601_wholesale-platform/product-design/assets/persona-stakeholder.png",
-    "P2601_wholesale-platform/product-design/assets/persona-buyer.png",
-    "P2601_wholesale-platform/product-design/assets/persona-seller.png"
+    "P2601_wholesale-platform/project-info/T1.2_Task-product-image-mvp.md",
+    "P2601_wholesale-platform/development/docs/D4_Product_Image_Plan.md",
+    "P2601_wholesale-platform/development/docs/README.md",
+    "P2601_wholesale-platform/development/docs/D2_Frontend_Backend_Architecture.md",
+    "P2601_wholesale-platform/project-info/D1_Development_Tools.md",
+    "P2601_wholesale-platform/development/docs/D3_Product_Status_Flow.md",
+    "P2601_wholesale-platform/product-design/PRD0_Product_Strategy.md",
+    "P2601_wholesale-platform/development/frontend-vue/src/pages/buyer/BuyerProductList.vue",
+    "P2601_wholesale-platform/development/frontend-vue/src/pages/buyer",
+    "P2601_wholesale-platform/development/backend/target/classes/com/wholesaleplatform/controller/BuyerProductController.class",
+    "P2601_wholesale-platform/development/frontend-vue/src/api/buyerProductApi.ts",
+    "P2601_wholesale-platform/development/backend/src/main/java/com/wholesaleplatform/controller/BuyerProductController.java",
+    "P2601_wholesale-platform/development/frontend-vue/dist/index.html",
+    "P2601_wholesale-platform/development/frontend-vue/dist/assets/index-DwzkUOLH.js",
+    "P2601_wholesale-platform/project-info/BS_BrainStorming/bs4_admin 端构思.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/hookable/LICENSE.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/hookable/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/magic-string-ast/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/birpc/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/ast-kit/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/acorn/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/acorn/CHANGELOG.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/node_modules/@babel/helper-validator-identifier/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/node_modules/@babel/helper-string-parser/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/node_modules/@babel/types/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/node_modules/@babel/parser/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/node_modules/@babel/parser/CHANGELOG.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@babel/generator/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/@emnapi/wasi-threads/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/node_modules/mlly/node_modules/pkg-types/README.md",
+    "P2601_wholesale-platform/development/frontend-vue/dist/assets/vite-BF8QNONU.svg",
+    "P2601_wholesale-platform/development/frontend-vue/dist/assets/hero-CLDdwZDr.png",
+    "P2601_wholesale-platform/development/frontend-vue/dist/favicon.svg",
+    "P2601_wholesale-platform/development/frontend-vue/dist/icons.svg",
+    "P2601_wholesale-platform/development/frontend-vue/src/assets/vue.svg",
+    "P2601_wholesale-platform/development/frontend-vue/src/assets/vite.svg",
+    "P2601_wholesale-platform/development/frontend-vue/src/assets/hero.png",
+    "P2601_wholesale-platform/development/frontend-vue/public/favicon.svg",
+    "P2601_wholesale-platform/development/frontend-vue/public/icons.svg",
+    "P2601_wholesale-platform/product-design/assets/analysis-buyer.png"
   ]
 }
