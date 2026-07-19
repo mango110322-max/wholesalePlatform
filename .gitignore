@@ -3,6 +3,8 @@
 
 # Editor
 .vscode/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 
 # Local/project temporary files
 .tmp_project_onboarding_skill/
