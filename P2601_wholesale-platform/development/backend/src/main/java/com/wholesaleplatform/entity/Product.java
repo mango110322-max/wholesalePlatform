@@ -12,6 +12,7 @@ public class Product {
     private BigDecimal price;
     private Integer stock;
     private Integer minOrderQuantity;
+    private String mainImageUrl;
     private String status;
     private String auditStatus;
     private LocalDateTime createdAt;
@@ -71,6 +72,14 @@ public class Product {
 
     public void setMinOrderQuantity(Integer minOrderQuantity) {
         this.minOrderQuantity = minOrderQuantity;
+    }
+
+    public String getMainImageUrl() {
+        return mainImageUrl;
+    }
+
+    public void setMainImageUrl(String mainImageUrl) {
+        this.mainImageUrl = mainImageUrl;
     }
 
     public String getStatus() {

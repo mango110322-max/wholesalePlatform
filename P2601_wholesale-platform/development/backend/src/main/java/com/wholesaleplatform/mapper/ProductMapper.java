@@ -20,6 +20,7 @@ public interface ProductMapper {
               price,
               stock,
               min_order_quantity,
+              main_image_url,
               status,
               audit_status
             ) VALUES (
@@ -29,6 +30,7 @@ public interface ProductMapper {
               #{price},
               #{stock},
               #{minOrderQuantity},
+              #{mainImageUrl},
               #{status},
               #{auditStatus}
             )
@@ -46,6 +48,7 @@ public interface ProductMapper {
               price,
               stock,
               min_order_quantity AS minOrderQuantity,
+              main_image_url AS mainImageUrl,
               status,
               audit_status AS auditStatus,
               created_at AS createdAt,
@@ -95,6 +98,7 @@ public interface ProductMapper {
               price,
               stock,
               min_order_quantity AS minOrderQuantity,
+              main_image_url AS mainImageUrl,
               status,
               audit_status AS auditStatus,
               created_at AS createdAt,
@@ -113,6 +117,7 @@ public interface ProductMapper {
               price,
               stock,
               min_order_quantity AS minOrderQuantity,
+              main_image_url AS mainImageUrl,
               status,
               audit_status AS auditStatus,
               created_at AS createdAt,

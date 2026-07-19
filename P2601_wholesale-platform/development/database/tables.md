@@ -21,6 +21,7 @@
 | `price` | `DECIMAL(10,2)` | 是 | 无 | 商品价格 |
 | `stock` | `INT` | 是 | 无 | 当前库存 |
 | `min_order_quantity` | `INT` | 是 | 无 | 起批量 |
+| `main_image_url` | `VARCHAR(500)` | 否 | `NULL` | 商品主图 URL，允许为空；当前阶段保存外部图片链接，暂不支持本地图片上传 |
 | `status` | `VARCHAR(30)` | 是 | `DRAFT` | 商品上下架状态 |
 | `audit_status` | `VARCHAR(30)` | 是 | `PENDING` | 商品审核状态 |
 | `created_at` | `DATETIME` | 是 | 当前时间 | 创建时间 |

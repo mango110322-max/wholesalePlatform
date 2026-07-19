@@ -15,6 +15,7 @@ const form = reactive({
   price: 0,
   stock: 0,
   minOrderQuantity: 1,
+  mainImageUrl: '', // 新增 mainImageUrl 字段
 })
 
 const saving = ref(false)
@@ -28,6 +29,7 @@ function resetForm() {
   form.price = 0
   form.stock = 0
   form.minOrderQuantity = 1
+  form.mainImageUrl = '' 
 }
 
 async function handleSubmit() {
@@ -43,6 +45,7 @@ async function handleSubmit() {
       price: form.price,
       stock: form.stock,
       minOrderQuantity: form.minOrderQuantity,
+      mainImageUrl: form.mainImageUrl, 
     })
     emit('saved', savedProduct.value)
     resetForm()
@@ -85,6 +88,11 @@ async function handleSubmit() {
       <label>
         起批量
         <input v-model.number="form.minOrderQuantity" type="number" min="1" />
+      </label>
+
+      <label>
+        商品图
+        <input v-model="form.mainImageUrl" type="text" placeholder="请输入该商品图的链接" />
       </label>
 
       <div class="actions">

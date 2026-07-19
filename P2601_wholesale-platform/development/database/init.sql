@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS product (
   price DECIMAL(10,2) NOT NULL COMMENT '价格',
   stock INT NOT NULL COMMENT '库存',
   min_order_quantity INT NOT NULL COMMENT '起批量',
+  main_image_url VARCHAR(500) COMMENT '主图URL',
   status VARCHAR(30) NOT NULL DEFAULT 'DRAFT' COMMENT '商品上下架状态',
   audit_status VARCHAR(30) NOT NULL DEFAULT 'PENDING' COMMENT '审核状态',
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',

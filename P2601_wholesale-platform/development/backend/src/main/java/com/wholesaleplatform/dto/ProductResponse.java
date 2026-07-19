@@ -12,6 +12,7 @@ public class ProductResponse {
     private BigDecimal price;
     private Integer stock;
     private Integer minOrderQuantity;
+    private String mainImageUrl;
     private String status;
     private String auditStatus;
 
@@ -24,6 +25,7 @@ public class ProductResponse {
         response.setPrice(product.getPrice());
         response.setStock(product.getStock());
         response.setMinOrderQuantity(product.getMinOrderQuantity());
+        response.setMainImageUrl(product.getMainImageUrl());
         response.setStatus(product.getStatus());
         response.setAuditStatus(product.getAuditStatus());
         return response;
@@ -83,6 +85,14 @@ public class ProductResponse {
 
     public void setMinOrderQuantity(Integer minOrderQuantity) {
         this.minOrderQuantity = minOrderQuantity;
+    }
+
+    public String getMainImageUrl() {
+        return mainImageUrl;
+    }
+
+    public void setMainImageUrl(String mainImageUrl) {
+        this.mainImageUrl = mainImageUrl;
     }
 
     public String getStatus() {

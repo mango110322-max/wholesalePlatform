@@ -22,7 +22,9 @@ async function refreshProductList() {
   }
 }
 
-async function handleProductSaved() {
+async function handleProductSaved(product: ProductResponse) {
+  console.log('Product saved:', product.name)
+
   showCreateDialog.value = false
   await refreshProductList()
 }
@@ -67,6 +69,7 @@ onMounted(() => {
         <thead>
           <tr>
             <th>ID</th>
+            <th>商品图</th>
             <th>商品名称</th>
             <th>类目</th>
             <th>价格</th>
@@ -79,10 +82,19 @@ onMounted(() => {
         </thead>
         <tbody>
           <tr v-if="products.length === 0">
-            <td colspan="9" class="empty">暂无商品</td>
+            <td colspan="10" class="empty">暂无商品</td>
           </tr>
           <tr v-for="product in products" :key="product.id">
             <td>{{ product.id }}</td>
+            <td>
+              <img
+                v-if="product.mainImageUrl"
+                class="product-thumbnail"
+                :src="product.mainImageUrl"
+                :alt="product.name"
+              />
+              <span v-else class="image-placeholder">暂无图片</span>
+            </td>
             <td>{{ product.name }}</td>
             <td>{{ product.categoryName }}</td>
             <td>{{ product.price }}</td>
@@ -234,6 +246,19 @@ tbody tr:last-child td {
 
 .muted {
   color: #9ca3af;
+}
+
+.product-thumbnail {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  color: #9ca3af;
+  font-size: 12px;
 }
 
 .dialog-mask {

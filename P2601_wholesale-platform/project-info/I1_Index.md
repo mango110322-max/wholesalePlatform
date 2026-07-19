@@ -19,7 +19,6 @@ P2601_wholesale-platform      项目名称
 │   ├── I1_Index              索引，记录项目模块索引、编号说明、内容查找入口
 │   ├── A1_Architecture       架构，记录项目关键构成、业务/产品/系统模块关系
 │   ├── U1_User_Learning_Profile  用户学习阶段与沟通偏好，用于帮助 AI 按当前能力解释项目
-│   ├── D1_Development_Tools  开发工具速查，记录语言、框架、工具及其关系
 │   ├── BS_BrainStorming/     用于存放头脑风暴与发散想法的模块
 │   ├── L1_Log                用于记录项目进展日志
 │   ├── Plan                  用于存放项目目标、介绍与执行步骤
@@ -31,6 +30,7 @@ P2601_wholesale-platform      项目名称
 │   │   └── Archive           归档已完成任务
 │   └── RelatedDocs/          相关文档文件夹
 │       ├── L2_RelatedDocs    以表格形式记录所有的相关文档
+│       ├── L2.01_Tools       常驻工具参考，记录工具介绍、常用指令、环境服务启动命令和工具关系
 │       ├── L2.1              对第 1 篇具体文档的分析或重点摘要
 │       └── L2.2              对第 2 篇具体文档的分析或重点摘要
 ├── product-design/           产品设计，承载 Research1 调研数据、PRD0 战略与范围、PRD1 里程碑、后续版本或功能 PRD
@@ -51,12 +51,12 @@ P2601_wholesale-platform      项目名称
 | 项目推进步骤 | `project-info/Plan.md` 的 `H1_How` | 看后续应该怎么做 |
 | 项目由哪些关键部分构成 | `project-info/A1_Architecture.md` | 看买家端、卖家端、管理端及其功能模块 |
 | 当前编程能力与沟通方式 | `project-info/U1_User_Learning_Profile.md` | 看 Allen 当前学习阶段、技术基础和适合的解释方式 |
-| 开发工具和框架关系 | `project-info/D1_Development_Tools.md` | 看 Java、Spring Boot、Vue、Node、MySQL、Apifox 等工具分别负责什么 |
+| 开发工具、常用指令和环境启动命令 | `project-info/RelatedDocs/L2.01_Tools.md` | 看 Java、Spring Boot、Vue、Node、MySQL、Apifox、Git 等工具分别负责什么，以及常用复制命令 |
 | 当前任务 | `project-info/T1_Task.md` 的 `Todo` | 看接下来要做什么 |
 | 已归档任务 | `project-info/T1_Task.md` 的 `Archive` | 看完成或归档的事项 |
 | 项目日志 | `project-info/L1_Log.md` | 看项目关键进展和阶段性变化 |
 | 发散想法 | `project-info/BS_BrainStorming/` | 看未整理成正式计划的想法 |
-| 相关资料 | `project-info/RelatedDocs/L2_RelatedDocs.md` | 看外部资料、文章、分析记录 |
+| 相关资料 | `project-info/RelatedDocs/L2_RelatedDocs.md` | 看外部资料、文章、分析记录；其中 `L2.01_Tools` 固定预留给工具参考 |
 | 产品设计产物 | `product-design/` | 看 Research1 的调研材料、PRD0 的战略层与范围层、PRD1 的里程碑，以及后续具体版本/功能 PRD |
 | UI/交互设计产物 | `ui-design/` | 看页面清单、信息架构、用户路径、线框、视觉风格、组件规范 |
 | 开发实现产物 | `development/` | 看技术方案、前后端工程、接口、数据库和开发记录 |

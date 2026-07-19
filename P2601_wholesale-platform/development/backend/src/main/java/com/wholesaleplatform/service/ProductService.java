@@ -31,6 +31,7 @@ public class ProductService {
         product.setPrice(request.getPrice());
         product.setStock(request.getStock());
         product.setMinOrderQuantity(request.getMinOrderQuantity());
+        product.setMainImageUrl(request.getMainImageUrl());
         product.setStatus(DEFAULT_STATUS);
         product.setAuditStatus(DEFAULT_AUDIT_STATUS);
 

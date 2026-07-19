@@ -7,6 +7,11 @@ const categories = ['Women', 'Men', 'Kid']
 const products = ref<ProductResponse[]>([])
 const loading = ref(false)
 const errorMessage = ref('')
+const failedImageIds = ref(new Set<number>())
+
+function handleImageError(productId: number) {
+  failedImageIds.value = new Set(failedImageIds.value).add(productId)
+}
 
 async function refreshProducts() {
   loading.value = true
@@ -55,21 +60,34 @@ onMounted(() => {
 
       <div v-else class="product-list">
         <article v-for="product in products" :key="product.id" class="product-item">
-          <h2>{{ product.name }}</h2>
-          <dl>
-            <div>
-              <dt>价格</dt>
-              <dd>{{ product.price }}</dd>
-            </div>
-            <div>
-              <dt>库存</dt>
-              <dd>{{ product.stock }}</dd>
-            </div>
-            <div>
-              <dt>起批量</dt>
-              <dd>{{ product.minOrderQuantity }}</dd>
-            </div>
-          </dl>
+          <div class="product-media">
+            <img
+              v-if="product.mainImageUrl && !failedImageIds.has(product.id)"
+              class="product-image"
+              :src="product.mainImageUrl"
+              :alt="product.name"
+              @error="handleImageError(product.id)"
+            />
+            <span v-else class="image-placeholder">暂无图片</span>
+          </div>
+
+          <div class="product-content">
+            <h2>{{ product.name }}</h2>
+            <dl>
+              <div>
+                <dt>价格</dt>
+                <dd>{{ product.price }}</dd>
+              </div>
+              <div>
+                <dt>库存</dt>
+                <dd>{{ product.stock }}</dd>
+              </div>
+              <div>
+                <dt>起批量</dt>
+                <dd>{{ product.minOrderQuantity }}</dd>
+              </div>
+            </dl>
+          </div>
         </article>
       </div>
     </section>
@@ -159,10 +177,45 @@ h1 {
 }
 
 .product-item {
-  padding: 18px;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  min-height: 168px;
+  overflow: hidden;
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
+}
+
+.product-media {
+  position: relative;
+  display: grid;
+  min-height: 168px;
+  place-items: center;
+  overflow: hidden;
+  background: #eef1f4;
+  border-right: 1px solid #e5e7eb;
+}
+
+.product-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  color: #8a94a3;
+  font-size: 13px;
+}
+
+.product-content {
+  display: flex;
+  min-width: 0;
+  padding: 22px 24px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h2 {
@@ -188,5 +241,28 @@ dd {
   margin: 4px 0 0;
   color: #111827;
   font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .buyer-page {
+    padding: 20px 16px;
+  }
+
+  .category-bar {
+    flex-wrap: wrap;
+  }
+
+  .product-item {
+    grid-template-columns: 112px minmax(0, 1fr);
+  }
+
+  .product-content {
+    padding: 16px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
 </style>

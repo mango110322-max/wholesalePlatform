@@ -15,7 +15,7 @@
 | 目录 | 作用 |
 | --- | --- |
 | `backend/` | Spring Boot 后端工程位置，后续放 Controller、Service、Mapper、Entity 等代码 |
-| `frontend/` | Vue 前端工程位置，先在一个前端工程中区分买家端、卖家端、管理端页面 |
+| `frontend-vue/` | Vue 前端工程位置，先在一个前端工程中区分买家端、卖家端、管理端页面 |
 | `database/` | 数据库建表脚本、初始化数据和表结构说明 |
 | `api/` | 接口设计、Apifox 导出或接口草稿 |
 | `docs/` | 开发学习路线、搭建步骤、技术方案说明 |

@@ -6,12 +6,14 @@ INSERT INTO product (
   category_name,
   price,
   stock,
-  min_order_quantity
+  min_order_quantity,
+  main_image_url
 ) VALUES (
   1,
   '夏季女装连衣裙',
   '女装',
   39.90,
   100,
-  5
+  5,
+  'https://example.com/images/dress.jpg'
 );

@@ -10,6 +10,7 @@ public class ProductCreateRequest {
     private BigDecimal price;
     private Integer stock;
     private Integer minOrderQuantity;
+    private String mainImageUrl;
 
     public Long getSellerId() {
         return sellerId;
@@ -57,5 +58,13 @@ public class ProductCreateRequest {
 
     public void setMinOrderQuantity(Integer minOrderQuantity) {
         this.minOrderQuantity = minOrderQuantity;
+    }
+
+    public String getMainImageUrl() {
+        return mainImageUrl;
+    }
+
+    public void setMainImageUrl(String mainImageUrl) {
+        this.mainImageUrl = mainImageUrl;
     }
 }

@@ -5,6 +5,7 @@ export type ProductCreateRequest = {
   price: number
   stock: number
   minOrderQuantity: number
+  mainImageUrl: string | null
 }
 
 export type ProductResponse = ProductCreateRequest & {
