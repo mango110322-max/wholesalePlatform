@@ -1,5 +1,6 @@
 package com.wholesaleplatform.mapper;
 
+import com.wholesaleplatform.dto.ProductUpdateRequest;
 import com.wholesaleplatform.entity.Product;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
@@ -107,6 +108,37 @@ public interface ProductMapper {
             WHERE id = #{productId}
             """)
     Product findById(@Param("productId") Long productId);
+
+    @Update("""
+            <script>
+            UPDATE product
+            <set>
+              <if test="request.name != null">
+                name = #{request.name},
+              </if>
+              <if test="request.categoryName != null">
+                category_name = #{request.categoryName},
+              </if>
+              <if test="request.price != null">
+                price = #{request.price},
+              </if>
+              <if test="request.stock != null">
+                stock = #{request.stock},
+              </if>
+              <if test="request.minOrderQuantity != null">
+                min_order_quantity = #{request.minOrderQuantity},
+              </if>
+              <if test="request.mainImageUrl != null">
+                main_image_url = #{request.mainImageUrl},
+              </if>
+            </set>
+            WHERE id = #{productId}
+            </script>
+            """)
+    int update(
+            @Param("productId") Long productId,
+            @Param("request") ProductUpdateRequest request
+    );
 
     @Select("""
             SELECT

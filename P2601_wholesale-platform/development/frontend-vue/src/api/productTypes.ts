@@ -18,3 +18,12 @@ export type ProductQuery = {
   status?: string
   auditStatus?: string
 }
+
+export type ProductUpdateRequest = {
+  name?: string
+  categoryName?: string
+  price?: number
+  stock?: number
+  minOrderQuantity?: number
+  mainImageUrl?: string | null
+}

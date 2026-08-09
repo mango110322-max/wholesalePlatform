@@ -3,11 +3,15 @@ import { onMounted, ref } from 'vue'
 import { getSellerProductList, publishProduct } from '../../api/sellerProductApi'
 import type { ProductResponse } from '../../api/productTypes'
 import ProductCreate from './ProductCreate.vue'
+import ProductUpdate from './ProductUpdate.vue'
 
 const products = ref<ProductResponse[]>([])
 const loading = ref(false)
 const errorMessage = ref('')
 const showCreateDialog = ref(false)
+const showUpdateDialog = ref(false)
+const selectedProductId = ref<number>(1)
+
 
 async function refreshProductList() {
   loading.value = true
@@ -26,6 +30,7 @@ async function handleProductSaved(product: ProductResponse) {
   console.log('Product saved:', product.name)
 
   showCreateDialog.value = false
+  showUpdateDialog.value = false
   await refreshProductList()
 }
 
@@ -113,6 +118,13 @@ onMounted(() => {
                 上架
               </button>
               <span v-else class="muted">-</span>
+              <button
+                type="button"
+                :disabled="loading"
+                @click="showUpdateDialog = true, selectedProductId = product.id"
+              >
+                编辑
+              </button>
             </td>
           </tr>
         </tbody>
@@ -130,6 +142,21 @@ onMounted(() => {
         <ProductCreate
           @saved="handleProductSaved"
           @cancel="showCreateDialog = false"
+        />
+      </section>
+    </div>
+    <div v-if="showUpdateDialog" class="dialog-mask">
+      <section class="dialog">
+        <header class="dialog-header">
+          <h2>编辑商品</h2>
+          <button class="icon-button" type="button" @click="showUpdateDialog = false">
+            x
+          </button>
+        </header>
+        <ProductUpdate
+          :updateProductId="selectedProductId"
+          @saved="handleProductSaved"
+          @cancel="showUpdateDialog = false"
         />
       </section>
     </div>

@@ -3,6 +3,7 @@ package com.wholesaleplatform.controller;
 import com.wholesaleplatform.dto.ProductCreateRequest;
 import com.wholesaleplatform.dto.ProductResponse;
 import com.wholesaleplatform.dto.ProductStatusRequest;
+import com.wholesaleplatform.dto.ProductUpdateRequest;
 import com.wholesaleplatform.service.ProductService;
 import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -39,11 +40,24 @@ public class SellerProductController {
         return productService.getProductList(status, auditStatus);
     }
 
+    @GetMapping("/{productId}")
+    public ProductResponse getProductById(@PathVariable Long productId) {
+        return productService.getProductById(productId);
+    }
+
     @PatchMapping("/{productId}/status")
     public ProductResponse updateProductStatus(
             @PathVariable Long productId,
             @RequestBody ProductStatusRequest request
     ) {
         return productService.updateProductStatus(productId, request.getStatus());
+    }
+
+    @PatchMapping("/{productId}")
+    public ProductResponse updateProduct(
+            @PathVariable Long productId,
+            @RequestBody ProductUpdateRequest request
+    ) {
+        return productService.updateProduct(productId, request);
     }
 }

@@ -2,6 +2,7 @@ package com.wholesaleplatform.service;
 
 import com.wholesaleplatform.dto.ProductCreateRequest;
 import com.wholesaleplatform.dto.ProductResponse;
+import com.wholesaleplatform.dto.ProductUpdateRequest;
 import com.wholesaleplatform.entity.Product;
 import com.wholesaleplatform.mapper.ProductMapper;
 import java.util.List;
@@ -36,6 +37,16 @@ public class ProductService {
         product.setAuditStatus(DEFAULT_AUDIT_STATUS);
 
         productMapper.insert(product);
+
+        return ProductResponse.from(product);
+    }
+
+    public ProductResponse getProductById(Long productId) {
+        Product product = productMapper.findById(productId);
+
+        if (product == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "商品不存在");
+        }
 
         return ProductResponse.from(product);
     }
@@ -79,5 +90,32 @@ public class ProductService {
                 .stream()
                 .map(ProductResponse::from)
                 .toList();
+    }
+
+    public ProductResponse updateProduct(Long productId, ProductUpdateRequest request) {
+        Product product = productMapper.findById(productId);
+
+        if (product == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "商品不存在");
+        }
+
+        if (!hasUpdateFields(request)) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "没有需要更新的商品信息");
+        }
+
+        productMapper.update(productId, request);
+
+        Product updatedProduct = productMapper.findById(productId);
+
+        return ProductResponse.from(updatedProduct);
+    }
+
+    private boolean hasUpdateFields(ProductUpdateRequest request) {
+        return request.getName() != null
+                || request.getCategoryName() != null
+                || request.getPrice() != null
+                || request.getStock() != null
+                || request.getMinOrderQuantity() != null
+                || request.getMainImageUrl() != null;
     }
 }
